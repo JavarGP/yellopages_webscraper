@@ -51,14 +51,6 @@ driver.close()
       
 action = ActionChains(driver)
 
-closed_shadow_host = driver.find_element(By.CSS_SELECTOR, "aa-dxt-qr-content")
-shadow_root = driver.execute_script('return arguments[0].root.querySelector(".container-fluid")', closed_shadow_host)
-input = shadow_root.find_element(By.ID, "search_input")
-action.click(input).send_keys(sheet[str_getVal].value).perform()
-button = shadow_root.find_element(By.ID, "search_button")
-action.move_to_element(button).click().perform()
-
-
 # list1 = ["john\n123street, 1053DX Amsterdam\n2341575","sam\n43street, 1056GH Amsterdam\n2341525", "duncan\ntunastreet, 9956zz Amsterdam\n5551525"]
 # new_list = []
 # i = 0
